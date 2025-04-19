@@ -61,7 +61,7 @@ export const Home = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <img
-          src="/huzafa-tassawer/huzafa.jpg"
+          src="./huzafa.jpg"
           alt="Syed Huzafa Tassawer"
           className="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 hover:scale-105 object-cover object-center"
         />
