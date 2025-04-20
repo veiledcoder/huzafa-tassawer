@@ -5,16 +5,16 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-4 md:px-12 py-4 md:py-10 gap-0"
+      
     >
       {/* Left Side - Text */}
       <motion.div
-        className="flex-1 text-center md:text-left space-y-4 mt-0 pt-0"
+        className="flex-1 text-center md:text-left space-y-2"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="mt-0 text-4xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
+        <h1 className="text-4xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-tight">
           Hi, I'm Syed Huzafa Tassawer
         </h1>
 
@@ -75,7 +75,7 @@ export const Home = () => {
 
       {/* Right Side - Image */}
       <motion.div
-        className="flex-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mb-0 hidden md:block" // Added hidden on mobile
+        className="flex-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg pt-12 pb-0 mb-0 gap-y-0 md:pt-0"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -83,7 +83,7 @@ export const Home = () => {
         <img
           src="./huzafa.jpg"
           alt="Syed Huzafa Tassawer"
-          className="mb-0 w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 hover:scale-105 object-cover object-center mx-auto"
+          className="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 hover:scale-105 object-cover object-center"
         />
       </motion.div>
     </section>
