@@ -75,7 +75,7 @@ export const Home = () => {
 
       {/* Right Side - Image */}
       <motion.div
-        className="flex-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg justify-center items-center pt-12 pl-16 pr-0 pb-12 mb-0 gap-x-0 md:pt-0"
+        className="flex-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg justify-center items-center pt-12 pl-24 pr-0 pb-12 mb-0 gap-x-0 md:pt-0"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
