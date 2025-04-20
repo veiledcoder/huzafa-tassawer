@@ -9,7 +9,7 @@ export const Home = () => {
     >
       {/* Left Side - Text */}
       <motion.div
-        className="flex-1 text-center md:text-left space-y-6"
+        className="flex-1 text-center md:text-left space-y-2"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
