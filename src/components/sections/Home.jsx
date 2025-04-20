@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-6 md:px-12 py-10 gap-10 md:gap-16"
+      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-4 md:px-12 py-6 md:py-10 gap-4 md:gap-8"
     >
       {/* Left Side - Text */}
       <motion.div
@@ -38,16 +38,36 @@ export const Home = () => {
         </div>
 
         <div className="flex justify-center md:justify-start space-x-4 text-xl lg:text-2xl text-gray-400 pt-2">
-          <a href="https://www.facebook.com/huzafatassawer3?mibextid=ZbWKwL" target="_blank" rel="noreferrer" className="hover:text-blue-600 transition-colors">
+          <a
+            href="https://www.facebook.com/huzafatassawer3?mibextid=ZbWKwL"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-blue-600 transition-colors"
+          >
             <FaFacebookF />
           </a>
-          <a href="https://www.instagram.com/huzafa_tassawer?igsh=MWE2MW5ncnQ3ZGVsYQ==" target="_blank" rel="noreferrer" className="hover:text-pink-500 transition-colors">
+          <a
+            href="https://www.instagram.com/huzafa_tassawer?igsh=MWE2MW5ncnQ3ZGVsYQ=="
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-pink-500 transition-colors"
+          >
             <FaInstagram />
           </a>
-          <a href="https://wa.me/yourwhatsapplink" target="_blank" rel="noreferrer" className="hover:text-green-500 transition-colors">
+          <a
+            href="https://wa.me/yourwhatsapplink"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-green-500 transition-colors"
+          >
             <FaWhatsapp />
           </a>
-          <a href="https://pk.linkedin.com/in/syed-huzafa-tassawer-394ba7261" target="_blank" rel="noreferrer" className="hover:text-blue-700 transition-colors">
+          <a
+            href="https://pk.linkedin.com/in/syed-huzafa-tassawer-394ba7261"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-blue-700 transition-colors"
+          >
             <FaLinkedinIn />
           </a>
         </div>
@@ -55,7 +75,7 @@ export const Home = () => {
 
       {/* Right Side - Image */}
       <motion.div
-        className="flex-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+        className="flex-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg pt-8 md:pt-0"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}

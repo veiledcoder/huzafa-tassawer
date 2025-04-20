@@ -40,7 +40,7 @@ export const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-6 rounded-xl border hover:-translate-y-1 border-blue-500/50 transition-all bg-blue-500"
+              className="p-6 rounded-xl hover:-translate-y-1  transition-all bg-gradient-to-r from-blue-500 to bg-cyan-400"
             >
               <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
               <p className="text-white text-sm font-light">{service.description}</p>

@@ -44,7 +44,7 @@ export const Skills = () => {
   return (
     <section
       id="skills"
-      className="bg-grey py-16 lg:px-32  "
+      className="bg-grey py-12 lg:px-32  "
       style={{ fontFamily: 'Space Grotesk, sans-serif' }}
     >
       <div className="max-w-6xl mx-auto text-center">

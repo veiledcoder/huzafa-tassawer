@@ -21,7 +21,6 @@ export const Testimonials = () => {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const timeoutRef = useRef(null);
-  const cardsToShow = 2;
 
   const nextSlide = () => setIndex((prev) => (prev + 1) % testimonials.length);
   const prevSlide = () =>
@@ -41,53 +40,72 @@ export const Testimonials = () => {
           What Clients Say
         </h2>
 
+        {/* Desktop View (2 at a time) */}
         <div
-          className="relative group"
+          className="hidden md:grid grid-cols-1 lg:grid-cols-2 gap-8"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
-          {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <AnimatePresence mode="wait">
+            {[0, 1].map((offset) => {
+              const actualIndex = (index + offset) % testimonials.length;
+              const testimonial = testimonials[actualIndex];
+              return (
+                <motion.div
+                  key={actualIndex}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5 }}
+                  className="p-6 border-2 border-blue-500/80 rounded-xl bg-gray-200 shadow-md"
+                >
+                  <p className="text-gray-600 text-lg italic mb-4">
+                    “{testimonial.text}”
+                  </p>
+                  <p className="text-sm font-semibold text-blue-500">
+                    {testimonial.author}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </AnimatePresence>
+        </div>
+
+        {/* Mobile View (1 at a time with arrows) */}
+        <div className="md:hidden relative">
+          <div className="overflow-hidden">
             <AnimatePresence mode="wait">
-              {Array(cardsToShow)
-                .fill(0)
-                .map((_, offset) => {
-                  const actualIndex = (index + offset) % testimonials.length;
-                  const testimonial = testimonials[actualIndex];
-                  return (
-                    <motion.div
-                      key={actualIndex}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
-                      transition={{ duration: 0.5 }}
-                      className="p-6 border border-blue-500/50 rounded-xl bg-blue-400 shadow-md"
-                    >
-                      <p className="text-white text-lg italic mb-4">
-                        “{testimonial.text}”
-                      </p>
-                      <p className="text-sm font-semibold text-white">
-                        {testimonial.author}
-                      </p>
-                    </motion.div>
-                  );
-                })}
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -30 }}
+                transition={{ duration: 0.5 }}
+                className="p-6 border-2 border-blue-500/80 rounded-xl bg-gray-200 shadow-md"
+              >
+                <p className="text-gray-600 text-base italic mb-4">
+                  “{testimonials[index].text}”
+                </p>
+                <p className="text-sm font-semibold text-blue-500">
+                  {testimonials[index].author}
+                </p>
+              </motion.div>
             </AnimatePresence>
           </div>
 
-          {/* Arrow Controls */}
-          <div className="absolute top-1/2 -translate-y-1/2 w-full px-4 flex justify-between">
+          {/* Arrows on mobile always visible */}
+          <div className="absolute top-1/2 left-0 right-0 flex justify-between px-4 -translate-y-1/2">
             <button
               onClick={prevSlide}
-              className="bg-blue-500/90 hover:bg-blue-600 text-white p-2 rounded-full shadow transition hidden group-hover:block"
+              className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full shadow"
             >
-              <ChevronLeft />
+              <ChevronLeft size={20} />
             </button>
             <button
               onClick={nextSlide}
-              className="bg-blue-500/90 hover:bg-blue-600 text-white p-2 rounded-full shadow transition hidden group-hover:block"
+              className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full shadow"
             >
-              <ChevronRight />
+              <ChevronRight size={20} />
             </button>
           </div>
         </div>

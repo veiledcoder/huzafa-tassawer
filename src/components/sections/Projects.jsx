@@ -36,7 +36,7 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="p-6 rounded-xl border border-black/10 bg-grey text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300"
+              className="p-6 rounded-xl transition-all duration-300  bg-gradient-to-r from-blue-500 to-cyan-400 text-white"
             >
               <h3 className="text-xl font-bold mb-2">{project.title}</h3>
               <p className="text-sm">{project.description}</p>
