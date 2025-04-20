@@ -5,12 +5,11 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-4 md:px-12 py-2 md:py-10 gap-0 md:gap-8"
-
+      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-4 md:px-12 py-4 md:py-10 gap-0" // gap set to 0 here
     >
       {/* Left Side - Text */}
       <motion.div
-        className="flex-1 text-center md:text-left space-y-2"
+        className="flex-1 text-center md:text-left space-y-4"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
@@ -76,7 +75,7 @@ export const Home = () => {
 
       {/* Right Side - Image */}
       <motion.div
-        className="flex-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg  md:pt-0"
+        className="flex-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mb-0" // mb-0 to remove extra spacing
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -84,7 +83,7 @@ export const Home = () => {
         <img
           src="./huzafa.jpg"
           alt="Syed Huzafa Tassawer"
-          className="w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 hover:scale-105 object-cover object-center"
+          className="mb-0 w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 hover:scale-105 object-cover object-center mx-auto"
         />
       </motion.div>
     </section>
