@@ -5,7 +5,8 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-4 md:px-12 py-2 md:py-10 gap-2 md:gap-8"
+      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-4 md:px-12 py-2 md:py-10 gap-0 md:gap-8"
+
     >
       {/* Left Side - Text */}
       <motion.div
