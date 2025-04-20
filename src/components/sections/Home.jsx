@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-4 md:px-12 py-6 md:py-10 gap-4 md:gap-8"
+      className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center px-4 md:px-12 py-2 md:py-10 gap-2 md:gap-8"
     >
       {/* Left Side - Text */}
       <motion.div
@@ -75,7 +75,7 @@ export const Home = () => {
 
       {/* Right Side - Image */}
       <motion.div
-        className="flex-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg pt-8 md:pt-0"
+        className="flex-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg pt-12 md:pt-0"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
