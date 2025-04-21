@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const Home = () => {
   return (
-    <section id="home" className="flex flex-row flex-wrap items-center justify-between px-6 lg:px-24 py-16 lg:pt-8 gap-y-10">
+    <section id="home" className="flex flex-row flex-wrap items-center justify-between px-6 lg:px-24 py-16 lg:pt-20 gap-y-10">
       
       {/* Left Side - Text */}
       <motion.div
